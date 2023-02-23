@@ -1,0 +1,34 @@
+[style]
+# Split before the '.' if we need to split a longer expression:
+#
+#   foo = ('This is a really long string: {}, {}, {}, {}'.format(a, b, c, d))
+#
+# would reformat to something like:
+#
+#   foo = ('This is a really long string: {}, {}, {}, {}'
+#          .format(a, b, c, d))
+split_before_dot=True
+
+# Split before the closing bracket if a list or dict literal doesn't fit on
+# a single line.
+split_before_closing_bracket=False
+
+# The column limit.
+column_limit=120
+
+# dedent_closing_brackets is set. For example:
+#
+#    call_func_that_takes_a_dict(
+#        {
+#            'key1': 'value1',
+#            'key2': 'value2',
+#        }
+#    )
+#
+# would reformat to:
+#
+#    call_func_that_takes_a_dict({
+#        'key1': 'value1',
+#        'key2': 'value2',
+#    })
+coalesce_brackets=True
